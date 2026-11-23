@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <pattern id="dots" width="22" height="22" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1.2" fill="#c69b54" opacity=".22"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="630" fill="#fff0ce"/>
+  <rect x="22" y="22" width="1156" height="586" rx="4" fill="none" stroke="#c69b54" stroke-width="2"/>
+  <rect x="33" y="33" width="1134" height="564" rx="3" fill="url(#dots)" stroke="#8e1935" stroke-opacity=".22"/>
+  <g fill="none" stroke="#c69b54" stroke-width="2" opacity=".8">
+    <circle cx="100" cy="315" r="62"/><circle cx="100" cy="315" r="46"/>
+    <circle cx="1100" cy="315" r="62"/><circle cx="1100" cy="315" r="46"/>
+    <path d="M100 258c-13 19-13 34 0 46 13-12 13-27 0-46Zm0 114c-13-19-13-34 0-46 13 12 13 27 0 46Zm-57-57c19-13 34-13 46 0-12 13-27 13-46 0Zm114 0c-19-13-34-13-46 0 12 13 27 13 46 0Z"/>
+    <path d="M1100 258c-13 19-13 34 0 46 13-12 13-27 0-46Zm0 114c-13-19-13-34 0-46 13 12 13 27 0 46Zm-57-57c19-13 34-13 46 0-12 13-27 13-46 0Zm114 0c-19-13-34-13-46 0 12 13 27 13 46 0Z"/>
+  </g>
+  <text x="600" y="160" fill="#617c4b" text-anchor="middle" font-family="Georgia,serif" font-size="20" letter-spacing="7">WITH THE BLESSINGS OF OUR FAMILIES</text>
+  <path d="M425 194h350" stroke="#c69b54"/>
+  <text x="600" y="326" fill="#8e1935" text-anchor="middle" font-family="Georgia,serif" font-size="105" font-style="italic">Amit &amp; Peul</text>
+  <text x="600" y="392" fill="#59352d" text-anchor="middle" font-family="Georgia,serif" font-size="31" letter-spacing="5">WEDDING INVITATION</text>
+  <text x="600" y="450" fill="#617c4b" text-anchor="middle" font-family="Georgia,serif" font-size="22">13 &amp; 14 December 2026 · West Bengal, India</text>
+  <g fill="#8e1935">
+    <path d="M580 526c10-20 10-33 0-44-10 11-10 24 0 44Zm20 0c-10-20-10-33 0-44 10 11 10 24 0 44Zm-15-1c-22-9-33-7-40 3 14 8 26 7 40-3Zm10 0c22-9 33-7 40 3-14 8-26 7-40-3Zm-5-3v20"/>
+  </g>
+</svg>
