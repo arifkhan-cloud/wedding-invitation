@@ -22,12 +22,11 @@ export const weddingData = {
   invocation: "ওঁ শ্রী শ্রী প্রজাপতয়ে নমঃ",
   timezone: "Asia/Kolkata",
   publicUrl: "",
-  family: "Amal Chandra Bhunia & Milali Bhunia",
+  family: "Amal Chandra Bhunia & Mitali Bhunia",
   invitationMessage:
     "With the blessings of our families, we cordially invite you to celebrate this special occasion with us.\n\nYour gracious presence will make our celebration even more special.",
   finalMessage:
     "We would be delighted to have you with us to celebrate the beginning of a beautiful journey.",
-  shareHeading: "A Beautiful Beginning, A Lifetime of Togetherness",
   events: [
     {
       id: "ceremony",
@@ -38,6 +37,8 @@ export const weddingData = {
       startMinute: 0,
       venueName: "Tekhali Bazar",
       venueAddress: "Tekhali Bazar, West Bengal, India",
+      latitude: 21.9368396,
+      longitude: 87.9548595,
     },
     {
       id: "reception",
@@ -48,6 +49,8 @@ export const weddingData = {
       startMinute: 0,
       venueName: "Lakshmi Bhavan",
       venueAddress: "Lakshmi Bhavan, Nandigram, West Bengal, India",
+      latitude: 22.0043357,
+      longitude: 88.0106238,
     },
   ] satisfies WeddingEvent[],
 } as const;

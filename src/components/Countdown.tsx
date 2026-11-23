@@ -1,5 +1,5 @@
 import { useCountdown } from "../hooks/useCountdown";
-import { formatDate } from "../utils/shareUtils";
+import { formatDate } from "../utils/dateUtils";
 
 const units = [
   ["days", "Days"],

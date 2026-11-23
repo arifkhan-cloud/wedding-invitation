@@ -10,6 +10,7 @@ export function FinalInvitation() {
       <h2>{weddingData.finalMessage}</h2>
       <p className="final-signoff">With love, <span>{weddingData.groom} &amp; {weddingData.bride}</span></p>
       <div className="footer-line"><Heart size={13} fill="currentColor" /> Made for a moment that lasts forever</div>
+      <p className="footer-credit">Invitation made with love by @rif · © {new Date().getFullYear()}</p>
     </footer>
   );
 }

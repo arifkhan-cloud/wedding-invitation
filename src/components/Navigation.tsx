@@ -8,7 +8,6 @@ const links = [
   ["countdown", "Countdown"],
   ["venues", "Venues"],
   ["family", "Family"],
-  ["share", "Share"],
 ] as const;
 
 export function Navigation() {

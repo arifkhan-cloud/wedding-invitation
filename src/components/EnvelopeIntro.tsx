@@ -7,10 +7,10 @@ type Props = { onOpen: () => void };
 
 export function EnvelopeIntro({ onOpen }: Props) {
   const [opened, setOpened] = useState(false);
-  const open = (skipAnimation = false) => {
+  const open = () => {
     if (opened) return;
     setOpened(true);
-    const delay = skipAnimation || window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 0 : 1250;
+    const delay = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 650 : 1800;
     window.setTimeout(onOpen, delay);
   };
 
@@ -25,7 +25,14 @@ export function EnvelopeIntro({ onOpen }: Props) {
         <h1 className="envelope-names">{weddingData.groom}<span>&amp;</span>{weddingData.bride}</h1>
         <p className="envelope-intro">YOU ARE CORDIALLY INVITED</p>
       </div>
-      <div className="envelope-art" aria-hidden="true">
+      <button
+        type="button"
+        className="envelope-art"
+        onClick={open}
+        disabled={opened}
+        aria-label="Tap to unseal the wedding invitation"
+      >
+        <span className="envelope-orbit" aria-hidden="true" />
         <div className="envelope-paper"><Flower2 size={26} strokeWidth={1} /><span>With love,</span><strong>{weddingData.groom} &amp; {weddingData.bride}</strong></div>
         <div className="envelope-back" />
         <div className="envelope-flap" />
@@ -33,13 +40,12 @@ export function EnvelopeIntro({ onOpen }: Props) {
         <div className="envelope-front-right" />
         <div className="envelope-front-bottom" />
         <div className="wax-seal"><span>অ</span></div>
-      </div>
+      </button>
       <button className="button button--primary envelope-open-button" onClick={() => open()} aria-label="Open your wedding invitation">
-        {opened ? "OPENING YOUR INVITATION" : "OPEN YOUR INVITATION"}
+        {opened ? "UNSEALING YOUR INVITATION" : "BREAK THE SEAL"}
         <ArrowDown size={16} aria-hidden="true" />
       </button>
-      {!opened && <button className="skip-button" onClick={() => open(true)}>Skip animation</button>}
-      <p className="envelope-footnote">A little note, opened with love</p>
+      <p className="envelope-footnote">A little surprise, sealed with love</p>
     </section>
   );
 }

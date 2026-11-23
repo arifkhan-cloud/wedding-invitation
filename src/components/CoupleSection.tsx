@@ -47,7 +47,6 @@ export function CoupleSection() {
           <circle cx="145" cy="170" r="4" fill="#C69B54" />
           <circle cx="330" cy="173" r="4" fill="#C69B54" />
         </svg>
-        <div className="couple-caption">Bengali wedding, timeless love</div>
       </div>
     </section>
   );

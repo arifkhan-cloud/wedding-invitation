@@ -1,6 +1,6 @@
 import { CalendarDays, Clock3, MapPin, Sparkles } from "lucide-react";
 import { weddingData } from "../data/weddingData";
-import { formatDate } from "../utils/shareUtils";
+import { formatDate } from "../utils/dateUtils";
 import { CalendarButton } from "./CalendarButtons";
 
 type Props = { publicUrl: string };

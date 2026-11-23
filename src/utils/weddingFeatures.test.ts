@@ -4,7 +4,7 @@ import { eventInstant, getCountdown } from "../hooks/useCountdown";
 import { getDirectionsUrl, getEmbedUrl, getMapSearchUrl } from "./mapsLinks";
 import { getPublicInvitationUrl } from "./publicUrl";
 import { createCalendarFile } from "./calendarGenerator";
-import { formatDate, invitationMessage } from "./shareUtils";
+import { formatDate } from "./dateUtils";
 
 describe("wedding events", () => {
   it("uses the supplied event dates and formats dates in English", () => {
@@ -31,20 +31,12 @@ describe("wedding events", () => {
   });
 });
 
-describe("sharing and maps", () => {
-  it("includes the public link and both events in the WhatsApp message", () => {
-    const message = invitationMessage("https://example.github.io/amit-peul-wedding/");
-    expect(message).toContain("Amit & Peul");
-    expect(message).toContain("13 December 2026");
-    expect(message).toContain("14 December 2026");
-    expect(message).toContain("https://example.github.io/amit-peul-wedding/");
-  });
-
-  it("builds Google Maps search and directions URLs without coordinates or API keys", () => {
+describe("maps and calendar", () => {
+  it("uses the supplied map pin coordinates for location, directions, and embeds", () => {
     const event = weddingData.events[1];
-    expect(getMapSearchUrl(event)).toContain("Lakshmi%20Bhavan");
-    expect(getDirectionsUrl(event)).toContain("Nandigram");
-    expect(getEmbedUrl(event)).toBeNull();
+    expect(getMapSearchUrl(event)).toContain("22.0043357%2C88.0106238");
+    expect(getDirectionsUrl(event)).toContain("22.0043357%2C88.0106238");
+    expect(getEmbedUrl(event)).toContain("22.0043357%2C88.0106238");
   });
 
   it("creates an importable calendar event using India Standard Time", () => {

@@ -7,8 +7,6 @@ import { Countdown } from "./components/Countdown";
 import { CoupleSection } from "./components/CoupleSection";
 import { VenueSection } from "./components/VenueSection";
 import { FamilyBlessings } from "./components/FamilyBlessings";
-import { ShareInvitation } from "./components/ShareInvitation";
-import { QRCodeSection } from "./components/QRCodeSection";
 import { FinalInvitation } from "./components/FinalInvitation";
 import { FloatingBackToTop } from "./components/FloatingBackToTop";
 import { useScrollReveal } from "./hooks/useScrollReveal";
@@ -32,8 +30,6 @@ export default function App() {
         <CoupleSection />
         <VenueSection />
         <FamilyBlessings />
-        <ShareInvitation />
-        <QRCodeSection />
         <FinalInvitation />
       </div>
       {opened && <FloatingBackToTop />}
