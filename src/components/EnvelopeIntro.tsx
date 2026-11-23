@@ -10,7 +10,7 @@ export function EnvelopeIntro({ onOpen }: Props) {
   const open = () => {
     if (opened) return;
     setOpened(true);
-    const delay = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 650 : 1800;
+    const delay = window.matchMedia("(prefers-reduced-motion: reduce)").matches ? 700 : 2300;
     window.setTimeout(onOpen, delay);
   };
 
@@ -39,11 +39,22 @@ export function EnvelopeIntro({ onOpen }: Props) {
         <div className="envelope-front-left" />
         <div className="envelope-front-right" />
         <div className="envelope-front-bottom" />
-        <div className="wax-seal"><span>অ</span></div>
+        <div className="wax-seal">
+          <svg className="wax-seal__heart" viewBox="0 0 64 58" aria-hidden="true">
+            <defs>
+              <radialGradient id="wax-heart-fill" cx="35%" cy="28%">
+                <stop offset="0" stopColor="#b4454f" />
+                <stop offset="1" stopColor="#8e1935" />
+              </radialGradient>
+            </defs>
+            <path d="M32 55 6.7 29.8C-5 18.2 3.2 2 17 2c6.2 0 11.6 3.4 15 9 3.4-5.6 8.8-9 15-9 13.8 0 22 16.2 10.3 27.8L32 55Z" />
+            <text x="32" y="32" textAnchor="middle">A&amp;P</text>
+          </svg>
+        </div>
       </button>
-      <button className="button button--primary envelope-open-button" onClick={() => open()} aria-label="Open your wedding invitation">
-        {opened ? "UNSEALING YOUR INVITATION" : "BREAK THE SEAL"}
-        <ArrowDown size={16} aria-hidden="true" />
+      <button className="envelope-open-button" onClick={() => open()} aria-label="Witness the beginning">
+        <span className="envelope-open-button__label">{opened ? "A NEW CHAPTER OPENS" : "WITNESS THE BEGINNING"}</span>
+        <span className="envelope-open-button__icon"><ArrowDown size={17} aria-hidden="true" /></span>
       </button>
       <p className="envelope-footnote">A little surprise, sealed with love</p>
     </section>
